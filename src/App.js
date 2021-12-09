@@ -10,10 +10,10 @@ import Explanation from "./explanation";
 
 
 function App() {
-  const [content, setContent]  = useState({})
+  const [content, setContent]  = useState([])
 
   useEffect(() => {
-    axios.get('https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY')
+    axios.get('https://api.nasa.gov/planetary/apod?api_key=fk3viUpG23DbzjpMlP3PL1PrSjf97WPd4V14d4LP')
     .then( resp => {
       console.log(resp)
       setContent(resp.data)
@@ -31,16 +31,6 @@ function App() {
       <Date con={content}  /> 
       <Explanation con={content}  /> 
 
-
-
-{/* 
-      <img
-            src={content.url}
-            alt="NASA" />
-      <div>
-        <h2>{content.title}</h2>
-        <h2>{content.date}</h2>
-        </div>       */}
       
     </div>
   );
