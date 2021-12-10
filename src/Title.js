@@ -3,11 +3,13 @@ import styled from "styled-components";
 
 const StyledTitle = styled.div`
 
- color: #12978C;
+ color: ${props => props.theme.primaryColor};
 
  &:hover {
      color: #041A1B;
      font-style: italic;
+     box-shadow: 3px 3px ${props => props.theme.primaryColor}, 
+     -1em 0 .4em ${props=>props.theme.secondaryColor};
  }
 `
 
